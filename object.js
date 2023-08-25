@@ -125,3 +125,43 @@ const cachorroLabrador = {
 
 console.log(cachorroLabrador.late('homem')); // Saída: Woof! Woof!
 console.log(cachorroLabrador.late('mulher')); // Saída: ... (silêncio)
+
+// Tudo é Objeto
+/**Strings, Números, Boolean, Objetos e mais, possuem propriedades e métodos. Por isso são objetos.*/
+var nome = 'Wesley';
+console.log(nome.length); // 6 (comprimento da string)
+console.log(nome.charAt(1)); // 'e' (caractere na posição 1)
+console.log(nome.replace('ey', 'eyi')); // 'Wesleyi' (substituição de caracteres)
+console.log(nome); // 'Wesley'
+/**Uma string herda propriedades e métodos do construtor String() */
+
+// Números
+var altura = 1.8;
+console.log(altura.toString()); // '1.8' (conversão para string)
+console.log(altura.toFixed()); // '2' (arredondamento para número inteiro)
+/**Os números são temporariamente envolvidos em um objeto para acessar suas propriedades e métodos. */
+
+// Funções
+function areaQuadrado(lado) {
+  return lado * lado;
+}
+
+console.log(areaQuadrado.toString());
+// "function areaQuadrado(lado) {
+//   return lado * lado;
+// }"
+
+console.log(areaQuadrado.length); // 1 (quantidade de argumentos da função)
+
+// Elementos do DOM
+var btn = document.querySelector('.btn');
+
+btn.classList.add('azul'); // adiciona a classe 'azul'
+console.log(btn.innerText); // 'Clique' (conteúdo de texto)
+btn.addEventListener('click', function () {
+  console.log('Clicou');
+});
+/**A maioria das interações JavaScript no navegador é feita através de propriedades e métodos de objetos do DOM.*/
+
+// Objetos revolucionaram a programação
+/**As Web APIs são conjuntos de métodos e propriedades que permitem a interação entre JavaScript e o navegador. Isso revolucionou a forma como desenvolvemos para a web. */
